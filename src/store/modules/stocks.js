@@ -24,12 +24,11 @@ const actions = {
 };
 
 const getters = {
-	stocks: state => {
-		return state.stocks;
-	}
+	stocks: state => state.stocks
 };
 
 export default {
+	namespaced: true,
 	state,
 	mutations,
 	actions,

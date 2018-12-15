@@ -32,8 +32,8 @@ export default {
 	methods: {
 		buyStock() {
 			const order = {
-				id: this.stock.id,
-				price: this.stock.price,
+				stockId: this.stock.id,
+				stockPrice: this.stock.price,
 				quantity: this.quantity
 			};
 			console.log(order);
