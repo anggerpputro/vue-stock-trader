@@ -20,7 +20,7 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a href="#">Link</a>
+						<a href="#">End Day</a>
 					</li>
 					<li class="dropdown">
 						<a
@@ -31,24 +31,20 @@
 							aria-haspopup="true"
 							aria-expanded="false"
 						>
-							Dropdown
+							Save & Load
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Action</a>
+								<a href="#">Save Data</a>
 							</li>
 							<li>
-								<a href="#">Another action</a>
-							</li>
-							<li>
-								<a href="#">Something else here</a>
-							</li>
-							<li role="separator" class="divider"></li>
-							<li>
-								<a href="#">Separated link</a>
+								<a href="#">Load Data</a>
 							</li>
 						</ul>
+					</li>
+					<li>
+						<strong class="navbar-text">Funds: {{ funds | currency }}</strong>
 					</li>
 				</ul>
 			</div>
@@ -57,3 +53,13 @@
 		<!-- /.container-fluid -->
 	</nav>
 </template>
+
+<script>
+export default {
+	computed: {
+		funds() {
+			return this.$store.getters["portofolio/funds"];
+		}
+	}
+};
+</script>
