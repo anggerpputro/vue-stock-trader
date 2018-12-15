@@ -3,7 +3,7 @@
 		<h2>Stocks Available</h2>
 		<hr>
 
-		<StockBuy v-for="stock in stocks" :key="stock.id"/>
+		<StockBuy v-for="stock in stocks" :key="stock.id" :stock="stock"/>
 	</div>
 </template>
 
