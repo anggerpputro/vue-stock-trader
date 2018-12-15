@@ -36,6 +36,7 @@ export default {
 				price: this.stock.price,
 				quantity: this.quantity
 			};
+			console.log(order);
 		}
 	}
 };
