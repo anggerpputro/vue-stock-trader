@@ -20,7 +20,7 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a href="#">End Day</a>
+						<a href="#" @click="endDay">End Day</a>
 					</li>
 					<li class="dropdown">
 						<a
@@ -59,6 +59,11 @@ export default {
 	computed: {
 		funds() {
 			return this.$store.getters["portofolio/funds"];
+		}
+	},
+	methods: {
+		endDay() {
+			this.$store.dispatch("stocks/randomizeStocks");
 		}
 	}
 };
