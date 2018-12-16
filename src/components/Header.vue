@@ -36,7 +36,7 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="#">Save Data</a>
+								<a href="#" @click="saveData">Save Data</a>
 							</li>
 							<li>
 								<a href="#">Load Data</a>
@@ -69,6 +69,14 @@ export default {
 	methods: {
 		endDay() {
 			this.$store.dispatch("stocks/randomizeStocks");
+		},
+		saveData() {
+			const data = {
+				funds: this.$store.getters["portofolio/funds"],
+				portofolio: this.$store.getters["portofolio/stocks"],
+				stocks: this.$store.getters["stocks/stocks"]
+			};
+			this.$http.put("data.json", data);
 		}
 	}
 };
